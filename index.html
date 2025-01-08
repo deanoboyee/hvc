@@ -37,11 +37,12 @@
 
         #topbar {
             display: flex;
+            /* justify-content: space-between!important; */
             margin-top: 20px;
         }
 
         #zoek {
-            margin: 13px 170px 20px 80px;
+            margin: 13px 170px 10px 80px;
             padding-bottom: 10px;
             border-bottom: 2px solid #1AABA0;
             width: 295px;
@@ -85,6 +86,10 @@
             color: #1AABA0;
         }
 
+        .Tcolor:hover {
+            color: #297D96;
+        }
+
         #werkenbij::before {
             content: '';
             position: absolute;
@@ -108,7 +113,6 @@
             z-index: -1;
             width: 155px;
             transition: 200ms;
-         
         }
 
         #werkenbij:hover {
@@ -119,6 +123,102 @@
         #werkenbij {
             margin-left: 1.5rem;
         }
+
+        #bottombar {
+            margin-top: 10px;
+            margin-left: 80px;
+        }
+
+        #infodatabases{
+            display: flex;
+            justify-content: space-between!important;
+            width: 60%;
+
+        }
+
+
+        .leerlingen {
+            position: relative;
+            width: auto;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .school {
+            position: relative;
+            width: auto;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .ondersteuning {
+            position: relative;
+            width: auto;
+            cursor: pointer;
+            display: flex;
+        }
+
+        .actueel {
+            position: relative;
+            width: auto;
+            cursor: pointer;
+            display: flex;
+        }
+
+
+        .options {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 200px;
+            background: #FFFFFF;
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+            z-index: 1;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .leerlingen:hover .options {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .school:hover .options {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .ondersteuning:hover .options {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .actueel:hover .options {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .option-item {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+            cursor: pointer;
+            font-size: .875rem;
+        }
+
+        .option-item:last-child {
+            border-bottom: none;
+        }
+
+        .option-item:hover {
+            color: #297D96;
+        }
+
 
         #hvclogo {
             width: 13vmax;
@@ -153,6 +253,7 @@
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
+            overflow-x: hidden;
 
         }
 
@@ -185,12 +286,90 @@
 
                     </div>
                     <div id="ziekmeldenbar">
-                        <p> Ziekmelden <span class="Gcolor">&nbsp;|&nbsp;</span> Downloads <span
-                                class="Gcolor">&nbsp;|&nbsp;</span> Magister
-                            <span class="Gcolor">&nbsp;|&nbsp;</span> Zermelo <span id="werkenbij">Werken bij HVC</span>
+                        <p> <span class="Tcolor">Ziekmelden</span> <span class="Gcolor">&nbsp;|&nbsp;</span> <span
+                                class="Tcolor">Downloads</span> <span class="Gcolor">&nbsp;|&nbsp;</span> <span
+                                class="Tcolor">Magister</span>
+                            <span class="Gcolor">&nbsp;|&nbsp;</span> <span class="Tcolor">Zermelo</span> <span
+                                id="werkenbij">Werken bij HVC</span>
                         </p>
 
                     </div>
+                </div>
+                <div id="bottombar">
+                    <div id="infodatabases">
+                        <div class="leerlingen">
+                            <p><span class="Tcolor">Leerlingen & Ouders</span>&nbsp;&nbsp;<img width="12px"
+                                    height="auto" src="Schermafbeelding 2025-01-08 205837.png" alt="plijtje omlaag">
+                            </p>
+                            <div class="options">
+                                <div class="option-item">Lestijden en toetsweken</div>
+                                <div class="option-item">Schoolvakanties en lesvrijedagen</div>
+                                <div class="option-item">Option 3</div>
+                                <div class="option-item">Option 4</div>
+                                <div class="option-item">Option 5</div>
+                                <div class="option-item">Option 6</div>
+                                <div class="option-item">Option 7</div>
+                                <div class="option-item">Option 8</div>
+                                <div class="option-item">Option 9</div>
+                                <div class="option-item">Option 10</div>
+                                <div class="option-item">Option 11</div>
+                                <div class="option-item">Option 12</div>
+                            </div>
+                        </div>
+
+                        <div class="school">
+                            <p><span class="Tcolor">onze school</span>&nbsp;&nbsp;<img width="12px" height="auto"
+                                    src="Schermafbeelding 2025-01-08 205837.png" alt="plijtje omlaag"> </p>
+                            <div class="options">
+                                <div class="option-item">Missie en visie</div>
+                                <div class="option-item">Ons team</div>
+                                <div class="option-item">Option 3</div>
+                                <div class="option-item">Option 4</div>
+                                <div class="option-item">Option 5</div>
+                                <div class="option-item">Option 6</div>
+                                <div class="option-item">Option 7</div>
+                                <div class="option-item">Option 8</div>
+                                <div class="option-item">Option 9</div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="ondersteuning">
+                            <p><span class="Tcolor">Ondersteuning</span>&nbsp;&nbsp;<img width="12px" height="auto"
+                                    src="Schermafbeelding 2025-01-08 205837.png" alt="plijtje omlaag"> </p>
+                            <div class="options">
+                                <div class="option-item">Coördinator Leerlingondersteuning</div>
+                                <div class="option-item">Begeleider Passend Onderwijs</div>
+                                <div class="option-item">Option 3</div>
+                                <div class="option-item">Option 4</div>
+                                <div class="option-item">Option 5</div>
+                                <div class="option-item">Option 6</div>
+                                <div class="option-item">Option 7</div>
+                                <div class="option-item">Option 8</div>
+                                <div class="option-item">Option 9</div>
+                                <div class="option-item">Option 10</div>
+                                
+                            </div>
+                        </div>
+
+                        <div class="actueel">
+                            <p><span class="Tcolor">Actueel</span>&nbsp;&nbsp;<img width="12px" height="auto"
+                                    src="Schermafbeelding 2025-01-08 205837.png" alt="plijtje omlaag"> </p>
+                            <div class="options">
+                                <div class="option-item">Nieuws</div>
+                                <div class="option-item">Agende</div>
+                                
+                                
+                            </div>
+                        </div>
+
+
+
+
+
+
+                    </div>
+
                 </div>
             </div>
 
